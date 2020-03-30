@@ -3,13 +3,13 @@ Rails.application.routes.draw do
 
   get 'sessions/create'
 
-  get 'session/new'
+  post '/logout', to: 'sessions#destroy'  
 
-  get 'session/create'
+    get '/signup', to: 'users#new'
 
-  get 'users/new'
+  post '/signup', to: 'users#create'
 
-  get 'users/create'
+  get '/home', to: 'users#home'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

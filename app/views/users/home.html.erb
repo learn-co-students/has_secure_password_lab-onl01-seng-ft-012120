@@ -1,0 +1,7 @@
+<h1>Your home page</h1>
+<p>Hi, <%= @user.name%>.</p>
+
+
+<%= form_tag "/logout" do |form| %>
+  <%= submit_tag "Logout"  %>
+<% end %>
